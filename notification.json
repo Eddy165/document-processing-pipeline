@@ -1,0 +1,21 @@
+{
+    "LambdaFunctionConfigurations":  [
+                                         {
+                                             "LambdaFunctionArn":  "arn:aws:lambda:ap-south-1:364807861912:function:document-processing-pipeline-ProcessFunction-AoltNxGbi4bS",
+                                             "Events":  [
+                                                            "s3:ObjectCreated:*"
+                                                        ],
+                                             "Filter":  {
+                                                            "Key":  {
+                                                                        "FilterRules":  [
+                                                                                            {
+                                                                                                "Value":  "uploads/",
+                                                                                                "Name":  "prefix"
+                                                                                            }
+                                                                                        ]
+                                                                    }
+                                                        },
+                                             "Id":  "ProcessUploadedDocuments"
+                                         }
+                                     ]
+}

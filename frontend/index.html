@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DocFlow | Document Processing Pipeline</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div><p class="eyebrow">SERVERLESS DOCUMENT PIPELINE</p><h1>DocFlow</h1><p class="sub">Upload resumes, extract useful metadata, and search the processed documents.</p></div>
+      <div class="status" id="apiStatus">API not configured</div>
+    </header>
+
+    <section class="card upload-card">
+      <h2>Upload document</h2>
+      <p>PDF, DOCX, or TXT. Maximum 10 MB.</p>
+      <div class="upload-row"><input id="file" type="file" accept=".pdf,.docx,.txt" /><button id="uploadBtn">Upload & Process</button></div>
+      <div id="uploadMsg" class="message"></div>
+    </section>
+
+    <section class="card">
+      <div class="toolbar"><div><h2>Processed documents</h2><p id="count">0 documents</p></div><div class="search"><input id="query" placeholder="Search name, email, skill, filename..." /><button id="searchBtn">Search</button></div></div>
+      <div class="table-wrap"><table><thead><tr><th>File</th><th>Name</th><th>Email</th><th>Skills</th><th>Words</th><th>Status</th></tr></thead><tbody id="rows"><tr><td colspan="6" class="empty">No documents yet.</td></tr></tbody></table></div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
